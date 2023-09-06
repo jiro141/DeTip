@@ -16,9 +16,9 @@ function Home(props) {
             <Box className='spece-home'>
                 <Box className="space">
                 </Box>
-                <Text marginTop={'40px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={'40px'}>Juntos construyamos <br></br> el nuevo mundo</Text>
-                <Box display={'flex'} justifyContent={'center'} marginTop={'-10%'} >
-                    <Image h={'800px'} src={planeta} alt='Logo palmosima' />
+                <Text marginTop={'40px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Juntos construyamos <br></br> el nuevo mundo</Text>
+                <Box display={'flex'} justifyContent={'center'} marginTop={{lg:'-10%',md:'-5%',sm:'10%'}} >
+                    <Image h={{lg:'800px',md:'500px',sm:'500px'}} src={planeta} alt='Logo palmosima' />
                 </Box>
             </Box>
             <Equipos />

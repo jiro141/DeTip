@@ -7,11 +7,11 @@ import '../../assets/css/Equipos.css'; // Asegúrate de importar tu archivo de e
 function Equipos(props) {
     return (
         <Box className="equipos-container" marginBottom={'-4.8%'}>
-            <Box className="text-container">
-                <Text textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={'40px'}>
+            <Box className="text-container" marginTop={{ base: "-50%", md: "-25%", lg: "-25%" }}>
+                <Text textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>
                     Equipos de trabajo <br></br> hechos a mano
                 </Text>
-                <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={'20px'}>
+                <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
                     Trabajemos juntos para construir tus sueños
                 </Text>
                 <Link>
