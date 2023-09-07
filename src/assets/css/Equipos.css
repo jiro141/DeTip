@@ -1,14 +1,22 @@
 /* Equipos.css */
 .equipos-container {
-    background-image: url('../../assets/img/manos.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en el contenedor */
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+    background-image: url('../../assets/img/manos.png');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-position: center center;
+    /* Centra la imagen en el contenedor */
+    height: 100vh;
+    /* Ajusta la altura según tus necesidades */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 2s ease, transform 0.8s ease;
 }
 
 .text-container {
@@ -16,38 +24,109 @@
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    animation: slideUp 1s ease-in-out;
+    animation-delay: 1.2s;
+    /* Retardo para dar tiempo a la carga de la página */
+    animation-fill-mode: both;
 }
 
-.landigs-container{
-    background-image: url('../../assets/img/landing.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en el contenedor */
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+.landigs-container {
+    background-image: url('../../assets/img/landing.png');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-position: center center;
+    /* Centra la imagen en el contenedor */
+    height: 100vh;
+    /* Ajusta la altura según tus necesidades */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.desarrollo-container{
-    background-image: url('../../assets/img/desarrollo.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en el contenedor */
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+
+.desarrollo-container {
+    background-image: url('../../assets/img/desarrollo.png');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-position: center center;
+    /* Centra la imagen en el contenedor */
+    height: 100vh;
+    /* Ajusta la altura según tus necesidades */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.desarrollo-hacemos{
-    background-image: url('../../assets/img/hacemos.png'); /* Ruta de la imagen de fondo */
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-repeat: no-repeat; /* Evita la repetición de la imagen */
-    background-position: center center; /* Centra la imagen en el contenedor */
-    height: 100vh; /* Ajusta la altura según tus necesidades */
+
+@media screen and (max-width: 800px) {
+    .landigs-container {
+        height: 100vh;
+        /* Ajusta la altura según tus necesidades */
+    }
+
+    .desarrollo-container {
+        height: 100vh;
+        /* Ajusta la altura según tus necesidades */
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .landigs-container {
+        height: 55vh;
+        /* Ajusta la altura según tus necesidades */
+    }
+
+    .desarrollo-container {
+        height: 55vh;
+        /* Ajusta la altura según tus necesidades */
+    }
+}
+
+.desarrollo-hacemos {
+    background-image: url('../../assets/img/hacemos.png');
+    /* Ruta de la imagen de fondo */
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    background-position: center center;
+    /* Centra la imagen en el contenedor */
+    height: 100vh;
+    /* Ajusta la altura según tus necesidades */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 2s ease, transform 0.8s ease;
+}
+
+.equipos-container.in-view {
+    /* Estilos cuando el elemento está en el viewport */
+    opacity: 1;
+    transform: translateY(0);
+}
+.desarrollo-hacemos.in-view{
+     /* Estilos cuando el elemento está en el viewport */
+     opacity: 1;
+     transform: translateY(0);
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

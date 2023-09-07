@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation, Route } from 'react-router-dom';
-import { Flex, Box, Image,Text } from '@chakra-ui/react';
+import { Flex, Box, Image, Text } from '@chakra-ui/react';
 import logo from '../assets/img/logo.png';
 import { AiFillInstagram, AiOutlineWhatsApp, AiFillLinkedin, AiFillMail } from "react-icons/ai";
 function Footer(props) {
@@ -19,7 +19,19 @@ function Footer(props) {
                     <Image h={'30px'} src={logo} alt='Logo DeTip' />
                 </Link>
             </Box>
-            <Text textAlign={'center'} fontSize={'16px'}>© 2023 DeTip compañía digital, todos los derechos reservados</Text>
+            <Text
+                display={{
+                    base: 'none', // Ocultar en dispositivos pequeños
+                    sm: 'none',   // Ocultar en dispositivos medianos
+                    md: 'flex',   // Mostrar en dispositivos grandes
+                    lg: 'flex',   // Mostrar en dispositivos extra grandes
+                }}
+                textAlign="center"
+                fontSize="16px"
+            >
+                © 2023 DeTip compañía digital, todos los derechos reservados
+            </Text>
+
             <Flex gap={'10px'} alignItems={'center'} >
                 <Link>
                     <AiOutlineWhatsApp />
