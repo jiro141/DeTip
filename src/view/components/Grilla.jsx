@@ -11,7 +11,7 @@ function Grilla(props) {
         threshold: 0.5, // Puedes ajustar este valor según tus necesidades
     });
     return (
-        <Grid className={`equipos-container ${inView ? 'in-view' : ''}`} ref={ref} templateColumns={{lg:'repeat(2,1fr)',md:'repeat(2,1fr)',sm:"repeat(1,1fr)"}} w={'100%'} margin={'0'} >
+        <Grid className={`equipos-grilla ${inView ? 'in-view' : ''}`} ref={ref} templateColumns={{lg:'repeat(2,1fr)',md:'repeat(2,1fr)',sm:"repeat(1,1fr)"}} w={'100%'} margin={'0'} >
             <Box className={`landigs-container ${inView ? 'in-view' : ''}`} ref={ref}>
                 <Box className='text-container'>
                     <Text marginTop={{ base: "-65%", md: "-70%", lg: "-80%" }} textAlign={'center'}  color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Landing pages <br></br>personalizadas</Text>

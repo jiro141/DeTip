@@ -107,6 +107,12 @@
     transform: translateY(60px);
     transition: opacity 2s ease, transform 0.8s ease;
 }
+.equipos-grilla {
+    
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 2s ease, transform 0.8s ease;
+}
 
 .equipos-container.in-view {
     /* Estilos cuando el elemento está en el viewport */
@@ -115,6 +121,11 @@
 }
 .desarrollo-hacemos.in-view{
      /* Estilos cuando el elemento está en el viewport */
+     opacity: 1;
+     transform: translateY(0);
+}
+.equipos-grilla.in-view{
+    /* Estilos cuando el elemento está en el viewport */
      opacity: 1;
      transform: translateY(0);
 }
