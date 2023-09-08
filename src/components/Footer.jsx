@@ -16,20 +16,20 @@ function Footer(props) {
         >
             <Box>
                 <Link to='/Home'>
-                    <Image h={'30px'} src={logo} alt='Logo DeTip' />
+                    {/* <Image h={'30px'} src={logo} alt='Logo DeTip' /> */}
                 </Link>
             </Box>
             <Text
                 display={{
-                    base: 'none', // Ocultar en dispositivos pequeños
-                    sm: 'none',   // Ocultar en dispositivos medianos
-                    md: 'flex',   // Mostrar en dispositivos grandes
-                    lg: 'flex',   // Mostrar en dispositivos extra grandes
+                    base: 'none', 
+                    sm: 'none',  
+                    md: 'flex',  
+                    lg: 'flex',   
                 }}
                 textAlign="center"
                 fontSize="16px"
             >
-                © 2023 DeTip compañía digital, todos los derechos reservados
+                © 2023 DeTip Company, todos los derechos reservados
             </Text>
 
             <Flex gap={'10px'} alignItems={'center'} >

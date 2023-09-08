@@ -2,9 +2,9 @@ import React from 'react';
 import '../assets/css/fondo.css'
 import { Text, Box, Image } from '@chakra-ui/react';
 import planeta from '../assets/img/astronautas.png'
-import Equipos from './components/Equipos';
-import Grilla from './components/Grilla';
-import Hacemos from './components/Hacemos';
+import Equipos from './components/Home/Equipos';
+import Grilla from './components/Home/Grilla';
+import Hacemos from './components/Home/Hacemos';
 
 function Home(props) {
     // console.log('home');
