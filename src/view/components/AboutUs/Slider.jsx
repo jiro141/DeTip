@@ -1,0 +1,66 @@
+import React, { useState, useEffect } from 'react';
+import { Box } from '@chakra-ui/react';
+import ButtomsAboutUs from '../../../components/widgets/ButtomsAboutUs';
+import mision from '../../../assets/img/icons/Mision.png';
+import vision from '../../../assets/img/icons/Vision.png';
+import objetivos from '../../../assets/img/icons/objetivos.png';
+import publico from '../../../assets/img/icons/Publico objetivo.png';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+function MySlider(props) {
+    const settings = {
+        centerMode: true,
+        infinite: true,
+        centerPadding: '0',
+        slidesToShow: 4, // Número de imágenes a mostrar en el slider
+        focusOnSelect: true,
+    };
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768); // Ajusta el punto de quiebre según sea necesario
+        };
+
+        handleResize(); // Comprueba el ancho de pantalla inicial
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return (
+        <Box justifyContent={'center'} display={'flex'} margin={'50px'} gap={'30px'}>
+            {isMobile ? (
+                <>
+                    <Slider {...settings}>
+                        <div>
+                            <ButtomsAboutUs icon={mision} titulo={'Misión'} />
+                        </div>
+                        <div>
+                            <ButtomsAboutUs icon={vision} titulo={'Visión'} />
+                        </div>
+                        <div>
+                            <ButtomsAboutUs icon={objetivos} titulo={'Público Objetivo'} />
+                        </div>
+                        <div>
+                            <ButtomsAboutUs icon={publico} titulo={'Objetivos Generales'} />
+                        </div>
+                    </Slider>
+                </>
+            ) : (
+                <>
+                    <ButtomsAboutUs icon={mision} titulo={'Misión'} />
+                    <ButtomsAboutUs icon={vision} titulo={'Visión'} />
+                    <ButtomsAboutUs icon={objetivos} titulo={'Público Objetivo'} />
+                    <ButtomsAboutUs icon={publico} titulo={'Objetivos Generales'} />
+                </>
+            )}
+        </Box>
+    );
+}
+
+export default MySlider;
