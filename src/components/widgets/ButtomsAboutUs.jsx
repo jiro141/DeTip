@@ -7,9 +7,9 @@ function ButtomsAboutUs({ titulo, icon }) {
     console.log(nosotros);
     return (
         <>
-            <Button w={'300px'} padding={'100px 20px'} onClick={() => changeNosotros(titulo)}>
+            <Button w={{lg:'300px',md:'200px',sm:'300px'}} padding={'100px 20px'} onClick={() => changeNosotros(titulo)}>
                 <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" >
-                    <Image marginTop={'-30px'} h={{ lg: '180px', md: '100px', sm: '100px' }} src={icon} alt='Logo palmosima' />
+                    <Image marginTop={'-30px'} h={{ lg: '180px', md: '100px', sm: '180px' }} src={icon} alt='Logo palmosima' />
                     <Text
                         marginTop={'-30px'}
                         color={'blackAlpha.900'}

@@ -77,7 +77,6 @@ function Datos(props) {
                         <Text
                             borderBottom={'solid 2px'}
                             borderColor={'#FFFF'}
-                            className="slide-up"
                             marginTop={'40px'}
                             color={'#FFFF'}
                             fontSize={{ base: "24px", md: "30px", lg: "40px" }}
@@ -94,7 +93,7 @@ function Datos(props) {
                             initial="hidden"
                             animate="visible"
                             variants={fadeInVariantsFonts}>
-                            <Text className="slide-up" marginTop={'10px'} textAlign={'justify'} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
+                            <Text  marginTop={'10px'} textAlign={'justify'} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
                                 Nos esforzamos por ser reconocidos como líderes en la creación de proyectos digitales sostenibles e innovadores que influyan en la forma en que las empresas operan y se relacionan con su entorno. Queremos ser una fuente de inspiración para la adopción de prácticas empresariales y tecnológicas respetuosas y sostenibles.
                             </Text>
                         </motion.div>
