@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import Home from './view/Home';
 import AboutUs from './view/AboutUs';
-// import Projects from './components/Projects';
+import Projects from './view/Projects';
 // import Services from './components/Services';
 // import Contact from './components/Contact';
 
@@ -13,7 +13,7 @@ const AppRoutes = () => {
             {/* <Route exact path="/" component={Home} /> */}
             <Route path="/Home" element={<Home />} />
             <Route path="/AboutUs" element={<AboutUs/>} />
-            {/* <Route path="/Projects" component={Projects} /> */}
+            <Route path="/Projects" element={<Projects/>}  />
             {/* <Route path="/Services" component={Services} /> */}
             {/* <Route path="/Contact" component={Contact} /> */}
         </Routes>
