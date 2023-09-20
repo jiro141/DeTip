@@ -1,8 +1,6 @@
 import React from 'react';
 import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/alice-carousel.css';
-import ButtomsAboutUs from '../../../components/widgets/ButtomsAboutUs';
-import mision from '../../../assets/img/icons/Mision.png';
 import { Box } from '@chakra-ui/react';
 import ButtomsProjects from '../../../components/widgets/ButtomsProjects';
 import patolsima from '../../../assets/img/projects/patolsima/1.png'

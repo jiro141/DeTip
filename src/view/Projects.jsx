@@ -5,6 +5,7 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { imgPatolsima } from '../components/array/imgProyect';
 import AliCarousel from './components/Projects/AliCarousel';
+import EquipoCarrusel from './components/Projects/EquipoCarrusel';
 
 function Projects(props) {
     return (
@@ -46,6 +47,7 @@ function Projects(props) {
             </Box>
             <AliCarousel />
             <Text className="slide-up" marginY={'40px'} textAlign={'center'} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Equipo</Text>
+            <EquipoCarrusel />
         </>
     );
 }
