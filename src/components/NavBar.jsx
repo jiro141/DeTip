@@ -29,14 +29,14 @@ const NavBar = () => {
             bg={'#1B1A19'}
             color={'whiteAlpha.900'}
             fontSize={'18px'}
-            margin={'0'}
+            margin={' 0'}
             padding={'10px 20px'}
             display={'flex'}
             justifyContent={'space-between'}
         >
-            <Box>
+            <Box m={'auto 0'}>
                 <Link to='/Home'>
-                    <Image h={'30px'} src={logo} alt='Logo palmosima' />
+                    <Image h={{ base: '40px', md: '35px', lg: '40px' }} src={logo} alt='Logo palmosima' />
                 </Link>
             </Box>
             {/* Mostrar el icono de menú (HamburgerIcon) en modo responsivo */}

@@ -38,11 +38,11 @@ body {
   z-index: -1;
   position: absolute;
   width: 290vw;
-  height: 400vh;
+  height: 300vh;
   top: 50%;
   left: 100%;
-  margin-top: -350vh;
-  margin-left: -180vw;
+  /* margin-top: -350vh; */
+  /* margin-left: -180vw; */
   animation: spin 240s linear infinite;
   background-size: 240px;
   backface-visibility: visible;

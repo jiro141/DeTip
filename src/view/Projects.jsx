@@ -9,21 +9,18 @@ import EquipoCarrusel from './components/Projects/EquipoCarrusel';
 
 function Projects(props) {
     return (
-        <>
-            <div className='space'>
-            </div>
+        <Box overflowX={'hidden'}>
+            <Box  className='space'>
+            </Box>
             <Box margin={{ lg: '30px 200px', md: '30px 150px', sm: '30px 100px' }}>
                 <Text className="slide-up" marginY={'40px'} textAlign={'left'} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Patolsima App</Text>
                 <Grid gap={'50px'} templateColumns={{ base: '1fr', md: ' 1fr', lg: '1.1fr 1fr' }}>
                     <Carousel
                         className="slide-up"
-                        // infiniteLoop
-                        centerMode
-                        // useKeyboardArrows={true}
-                        // emulateTouch={true}
+                        showArrows={false} // Oculta las flechas
+                        centerMode={false} // Desactiva el modo centrado
                         autoPlay
                         interval={3000}
-                    // autoFocus={true}
                     >
                         {imgPatolsima.map((image) => (
                             <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={image.url} alt='Logo palmosima' />
@@ -48,7 +45,7 @@ function Projects(props) {
             <AliCarousel />
             <Text className="slide-up" marginY={'40px'} textAlign={'center'} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Equipo</Text>
             <EquipoCarrusel />
-        </>
+        </Box>
     );
 }
 

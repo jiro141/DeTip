@@ -5,17 +5,20 @@ import Home from './view/Home';
 import AboutUs from './view/AboutUs';
 import Projects from './view/Projects';
 import Services from './view/Services';
-// import Contact from './components/Contact';
+import Contact from './view/Contact';
+import Index from './view/Index';
+import SpinnerWithLocation from './components/widgets/Spinner';
 
 const AppRoutes = () => {
     return (
         <Routes>
-            {/* <Route exact path="/" component={Home} /> */}
-            <Route path="/Home" element={<Home />} />
-            <Route path="/AboutUs" element={<AboutUs/>} />
-            <Route path="/Projects" element={<Projects/>}  />
-            <Route path="/Services" element={<Services/>}  />
-            {/* <Route path="/Contact" component={Contact} /> */}
+            {/* <Route path='/s' element={<SpinnerWithLocation />} /> */}
+            <Route exact path="/" element={<Home />} />
+            <Route path="/AboutUs" element={<AboutUs />} />
+            <Route path="/Projects" element={<Projects />} />
+            <Route path="/Services" element={<Services />} />
+            <Route path="/Contact" element={<Contact />} />
+
         </Routes>
     );
 };
