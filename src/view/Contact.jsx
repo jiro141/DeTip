@@ -55,19 +55,19 @@ const Contact = () => {
           </Link>
         </Flex>
       </Box>
-      <Box  className='slide-up' paddingY={'60px'} borderRadius={'30px'} m={{lg:'10%',md:'8%',sm:'5%'}} backgroundColor={'#bababac1'}>
+      <Box className='slide-up' paddingY={'60px'} borderRadius={'30px'} m={{ lg: '10%', md: '8%', sm: '5%' }} backgroundColor={'#bababac1'}>
         <form ref={form} onSubmit={sendEmail}>
           <VStack spacing={2}>
             <FormControl>
               <UnputFlotante
-                type="text" 
+                type="text"
                 nameI="user_name"
                 placeholder="Nombre y apellido"
               />
             </FormControl>
             <FormControl>
               <UnputFlotante
-                type="email" 
+                type="email"
                 name="user_email"
                 placeholder="Correo"
               />
@@ -87,7 +87,7 @@ const Contact = () => {
                 />
               </FormControl>
             </Box>
-            <Box gap={'5%'} padding={'2% 5%'}  w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
+            <Box gap={'5%'} padding={'2% 5%'} w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
               <FormControl >
                 <Input
                   type="date"
@@ -107,6 +107,13 @@ const Contact = () => {
                 />
               </FormControl>
             </Box>
+            <FormControl padding={'2% 5%'} w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
+              <Textarea
+                maxH={'100px'}
+                borderRadius='20px'
+                border={'none'}
+                backgroundColor={'#dadada'} placeholder='Mensaje' />
+            </FormControl>
             <Button type="submit" value="Send" borderRadius={'20px'} w={'90%'} backgroundColor="#000" color={'#FFF'} >
               Envía tu mensaje
             </Button>

@@ -27,7 +27,7 @@ function Hacemos(props) {
 
                 </Box>
                 <Box display={'flex'} justifyContent={'end'}>
-                    <Image textAlign={'right'} margin={'-15% 0  0'} className="slide-up float" h={'200px'} src={hojas} alt='Logo palmosima' />
+                    <Image textAlign={'right'} margin={'-15% 0  0'} className="slide-up hojas" h={'200px'} src={hojas} alt='Logo palmosima' />
                 </Box>
             </Box>
             <Box order={{ md: 2, lg: 2, base: 1 }} >

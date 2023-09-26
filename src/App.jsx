@@ -5,6 +5,7 @@ import AppRoutes from './Routes';
 import Footer from './components/Footer';
 import { NosotrosProvider } from './assets/context/nosotrosConstext';
 import { LanguageProvider } from './assets/context/IdiomaContext';
+import './App.css'
 // import { Route } from 'react-router-dom';
 import { Routes } from 'react-router-dom';
 import Index from './view/Index';
@@ -18,7 +19,7 @@ function App() {
         </Routes> */}
         <NavBar />
         <NosotrosProvider>
-          <AppRoutes />
+          <AppRoutes className="contenedor"  />
         </NosotrosProvider>
         <Footer />
       </LanguageProvider>

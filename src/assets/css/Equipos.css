@@ -143,7 +143,7 @@
     transition: opacity 2s ease, transform 0.8s ease;
 }
 .contacto {
-    background-image: url('../../assets/img/contacto.jpg');
+    background-image: url('../../assets/img/contacto.png');
     /* Ruta de la imagen de fondo */
     background-size: cover;
     /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
@@ -158,6 +158,7 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
+    /* filter: brightness(50%); */
     /* transform: translateY(60px); */
     /* transition: opacity 2s ease, transform 0.8s ease; */
 }

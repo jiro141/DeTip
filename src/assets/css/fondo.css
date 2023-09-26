@@ -67,10 +67,10 @@ body {
 /* Animación para hacer que la imagen flote */
 @keyframes hojas {
   0%, 100% {
-    transform: translateX(0);
+    transform: translateY(0);
   }
   50% {
-    transform: translateX(-50px);
+    transform: translateY(-20px);
   }
 }
 
@@ -90,8 +90,8 @@ body {
 }
 .hojas {
   
-  animation: hojas 3s ease-in-out infinite !important;
-  animation: slideUp 1s ease-in-out;
+  animation: hojas 5s ease-in-out infinite !important;
+  animation: slideUp 2s ease-in-out;
   animation-delay: 0.6s; /* Retardo para dar tiempo a la carga de la página */
   animation-fill-mode: both;
 }
