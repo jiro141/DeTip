@@ -4,6 +4,7 @@ import { Text, Box, Grid } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import '../../../assets/css/Equipos.css'; // Asegúrate de importar tu archivo de estilos CSS
 import { useInView } from 'react-intersection-observer'; 
+import MoreInfo from '../../../components/widgets/MoreInfo';
 function Equipos(props) {
     const [ref, inView] = useInView({
         triggerOnce: true, // La animación solo se activará una vez
@@ -18,11 +19,7 @@ function Equipos(props) {
                 <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
                     Trabajemos juntos para construir tus sueños
                 </Text>
-                <Link>
-                    <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'blue.400'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
-                        Más Información &rsaquo;
-                    </Text>
-                </Link>
+                <MoreInfo />
             </Box>
         </Box>
     );

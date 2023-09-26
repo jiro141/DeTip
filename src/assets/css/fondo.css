@@ -26,14 +26,14 @@ body {
 
 /* Space */
 
-.space {
+.space1 {
   z-index: -1;
   position: absolute;
   width: 300vw;
   height: 300vh;
   top: 50%;
   left: 100%;
-  margin-top: -300vh;
+  margin-top: -200vh;
   margin-left: -200vw;
   animation: spin 240s linear infinite;
   background-size: 240px;
