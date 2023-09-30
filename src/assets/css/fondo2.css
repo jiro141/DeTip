@@ -37,11 +37,11 @@ body {
 .space {
   z-index: -1;
   position: absolute;
-  width: 200vw;
-  height: 250vh;
+  width: 180vw;
+  height: 200vh;
   top: 50%;
   left: 100%;
-  margin-top: -200vh;
+  margin-top: -150vh; 
   margin-left: -130vw;
   animation: spin 240s linear infinite;
   background-size: 240px;
