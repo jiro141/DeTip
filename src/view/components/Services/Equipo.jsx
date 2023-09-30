@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import '../../../assets/css/Equipos.css'; // Asegúrate de importar tu archivo de estilos CSS
 import { useInView } from 'react-intersection-observer';
 import ContactButtom from '../../../components/widgets/ContactButtom';
+import { Title, Parrafo } from '../../../components/widgets/Texts';
 
 
 function Equipo(props) {
@@ -16,12 +17,9 @@ function Equipo(props) {
         <>
             <Box className={`equipo-container ${inView ? 'in-view' : ''}`} ref={ref} >
                 <Box className='text-container' marginTop={{ base: "5%", md: "5%", lg: "1%" }}>
-                    <Text textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>
-                        Equipo <br /> de desarrollo
-                    </Text>
-                    <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
-                       ¡Empodera tus visiones con nuestro equipo especializado de desarrollo web!
-                    </Text>
+                    <Title text='Equipo' />
+                    <Title text='de desarrollo' />
+                    <Parrafo text='¡Empodera tus visiones con nuestro equipo especializado de desarrollo web!' />
                     <Box textAlign={'center'} m={'20px'}>
                         <ContactButtom />
                     </Box>

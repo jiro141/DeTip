@@ -33,16 +33,16 @@ function Footer(props) {
             </Text>
 
             <Flex gap={'10px'} alignItems={'center'} >
-                <Link>
+                <Link href='https://wa.me/14095974199'>
                     <AiOutlineWhatsApp />
                 </Link>
-                <Link >
+                <Link href="https://www.linkedin.com/company/detip-company/about/"  >
                     <AiFillLinkedin />
                 </Link>
-                <Link >
+                <Link  href="https://www.instagram.com/detip_company">
                     <AiFillInstagram />
                 </Link>
-                <Link>
+                <Link href='mailto:Contacto@DeTipCompany.com'>
                     <AiFillMail />
                 </Link>
             </Flex>

@@ -1,21 +1,21 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import AliceCarousel from 'react-alice-carousel';
-import 'react-alice-carousel/lib/alice-carousel.css';
+// import 'react-alice-carousel/lib/alice-carousel.css';
+import '../../../assets/css/alice-carousel.css'
 import { Box } from '@chakra-ui/react';
 import ButtomsProjects from '../../../components/widgets/ButtomsProjects';
 import patolsima from '../../../assets/img/projects/patolsima/1.png'
 import detip from '../../../assets/img/projects/Detip/20.png'
 function AliCarousel(props) {
+    const [active,setActive]=useState(1)
     const carouselRef = useRef(null);
     const responsive = {
         0: { items: 1 },
         568: { items: 3 },
         1024: { items: 3 },
     };
-    const handleButtonClick = (buttonIndex) => {
-        if (carouselRef.current) {
-            carouselRef.current.slideTo(buttonIndex);
-        }
+    const handleButtonClick = () => {
+        setActive(active+1);
     };
 
     const items = [
@@ -41,12 +41,17 @@ function AliCarousel(props) {
 
     const Carousel = () => (
         <AliceCarousel
-            activeIndex={1}
-            mouseTracking
+            activeIndex={active}
+            mouseTracking={false}
             items={items}
             responsive={responsive}
-            controlsStrategy="alternate"
+            controlsStrategy='responsive'
+            autoPlayControls={true}
+            disableButtonsControls={false}
+            disableDotsControls={true}
+            keyboardNavigation={true}
             infinite={true}
+            
         />
     );
     return (

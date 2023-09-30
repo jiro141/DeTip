@@ -6,7 +6,7 @@ function ContactButtom(props) {
   return (
     // Usa el componente Link para redirigir a /Contact
     <Link to="/Contact">
-      <Button borderRadius={'50px'} color={'whiteAlpha.900'} backgroundColor={'blue.400'}>
+      <Button m={'10px'} borderRadius={'5px'} color={' #000'} backgroundColor={'#FFF'}>
         Contáctanos
       </Button>
     </Link>

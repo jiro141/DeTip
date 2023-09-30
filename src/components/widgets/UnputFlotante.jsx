@@ -36,7 +36,7 @@ import {
                 px: 2,
                 my: 2,
                 transformOrigin: "left top",
-                borderRadius: '50px',
+                borderRadius: '5px',
                 fontSize: '14px',
               }
             }
@@ -49,9 +49,9 @@ import {
   export default function UnputFlotante({placeholder,nameI,type}) {
     return (
       <ChakraProvider theme={theme}>
-        <Box padding={'1% 5%'}>
+        <Box >
           <FormControl  variant="floating" id="first-name" isRequired >
-            <Input type={type} name={nameI}  paddingY={'0'} marginY={'0'} borderRadius= '50px' border={'none'} backgroundColor={'#dadada'} placeholder=" " />
+            <Input type={type} name={nameI}   borderRadius= '5px' border={'none'} backgroundColor={'#dadada'} placeholder=" " />
             <FormLabel  >{placeholder}</FormLabel>
           </FormControl>
         </Box>

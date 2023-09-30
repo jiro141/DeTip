@@ -3,9 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { Flex, Box, Image, IconButton, Button } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { motion, AnimatePresence } from 'framer-motion';
-import '../assets/css/Global.css' // Importa motion y AnimatePresence
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faAddressCard, faTasks, faUsers, faEnvelopeOpenText } from '@fortawesome/free-solid-svg-icons';
+import { MenuItem } from './widgets/MenuItem';
+import '../assets/css/animacion.css'
 
-import logo from '../assets/img/logo.png';
+import logo from '../assets/img/Propuesta-Logo-1.webp';
+
+
 
 const NavBar = () => {
     const location = useLocation();
@@ -13,7 +18,6 @@ const NavBar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
-        // Función para manejar el evento de scroll
         const handleScroll = () => {
             if (window.scrollY > 0) {
                 setIsScrolled(true);
@@ -21,30 +25,21 @@ const NavBar = () => {
                 setIsScrolled(false);
             }
         };
-        // Agrega el evento de scroll al cargar el componente
+
         window.addEventListener('scroll', handleScroll);
 
-        // Limpia el evento cuando el componente se desmonta
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []
-    )
+    }, []);
 
     const isActive = (pathname) => {
         return location.pathname === pathname;
     };
 
-    const activeLinkStyles = {
-        background: 'radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(173,173,173,1) 0%, #1B1A19 68%)',
-        padding: '0',
-    };
-
-    // Función para alternar el estado del menú
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
-
 
     return (
         <Box
@@ -53,62 +48,31 @@ const NavBar = () => {
             color={'whiteAlpha.900'}
             fontSize={'18px'}
             margin={' 0'}
-            // marginBottom={'5%'}
             padding={'10px 20px'}
             display={'flex'}
             justifyContent={'space-between'}
         >
             <Box m={'auto 0'}>
-                <Link to='/'>
-                    <Image h={{ base: '40px', md: '35px', lg: '40px' }} src={logo} alt='Logo palmosima' />
+                <Link to="/">
+                    <Image h={{ base: '40px', md: '35px', lg: '40px' }} src={logo} alt="Logo palmosima" />
                 </Link>
             </Box>
-            {/* Mostrar el icono de menú (HamburgerIcon) en modo responsivo */}
             <IconButton
                 icon={isMenuOpen ? <CloseIcon fontSize={'20px'} /> : <HamburgerIcon fontSize={'30'} />}
-                display={['block', 'block', 'none']} // Mostrar solo en dispositivos móviles
+                display={['block', 'block', 'none']}
                 onClick={toggleMenu}
-                aria-label='Toggle Menu'
-                bgColor='transparent'
-                color='white'
+                aria-label="Toggle Menu"
+                bgColor="transparent"
+                color="white"
                 h={'50px'}
-                // fontSize={'20px'}
-                _hover={'none'}
                 alignSelf="center"
             />
-            <Flex
-                gap={'50px'}
-                alignItems={'center'}
-                justifyContent={['space-between', 'space-between', 'flex-end']}
-                display={['none', 'none', 'flex']}
-            >
-                <Link
-                    to='/AboutUs'
-                    style={isActive('/AboutUs') ? activeLinkStyles : {}}
-
-                >
-                    Nosotros
-                </Link>
-                <Link
-                    to='/Projects'
-                    style={isActive('/Projects') ? activeLinkStyles : {}}
-                >
-                    Proyectos
-                </Link>
-                <Link
-                    to='/Services'
-                    style={isActive('/Services') ? activeLinkStyles : {}}
-                >
-                    Servicios
-                </Link>
-                <Link
-                    to='/Contact'
-                    style={isActive('/Contact') ? activeLinkStyles : {}}
-                >
-                    Contacto
-                </Link>
+            <Flex gap={'50px'} alignItems={'center'} justifyContent={['space-between', 'space-between', 'flex-end']} display={['none', 'none', 'flex']}>
+                <MenuItem label="AboutUs" icon={<FontAwesomeIcon icon={faAddressCard} aria-hidden="true" />} />
+                <MenuItem label="Projects" icon={<FontAwesomeIcon icon={faTasks} aria-hidden="true" />} />
+                <MenuItem label="Services" icon={<FontAwesomeIcon icon={faUsers} aria-hidden="true" />} />
+                <MenuItem label="Contact" icon={<FontAwesomeIcon icon={faEnvelopeOpenText} aria-hidden="true" />} />
             </Flex>
-            {/* Agrega animación al menú desplegable */}
             <AnimatePresence>
                 {isMenuOpen && (
                     <motion.div
@@ -134,28 +98,14 @@ const NavBar = () => {
                             gap={'10px'}
                             borderBottomRadius={'20px'}
                         >
-                            {/* Utiliza map para aplicar animación a cada enlace */}
-                            {['AboutUs', 'Projects', 'Services', 'Contact'].map((path) => (
-                                <motion.div
-                                    key={path}
-                                    initial={{ opacity: 0, y: -20 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    exit={{ opacity: 0, y: -20 }}
-                                    transition={{ duration: 0.3 }}
-                                >
-                                    <Link
-                                        to={`/${path}`}
-                                        style={isActive(`/${path}`) ? activeLinkStyles : {}}
-                                    >
-                                        {path === 'AboutUs' ? 'Nosotros' : path}
-                                    </Link>
-                                </motion.div>
-                            ))}
+                            <MenuItem label="AboutUs" icon={<FontAwesomeIcon icon={faAddressCard} aria-hidden="true" />} />
+                            <MenuItem label="Projects" icon={<FontAwesomeIcon icon={faTasks} aria-hidden="true" />} />
+                            <MenuItem label="Services" icon={<FontAwesomeIcon icon={faUsers} aria-hidden="true" />} />
+                            <MenuItem label="Contact" icon={<FontAwesomeIcon icon={faEnvelopeOpenText} aria-hidden="true" />} />
                         </Box>
                     </motion.div>
                 )}
             </AnimatePresence>
-
         </Box>
     );
 };

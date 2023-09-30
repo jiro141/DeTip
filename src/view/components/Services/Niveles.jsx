@@ -6,6 +6,7 @@ import IconSenior from '../../../assets/img/icons/Senior.png'
 import '../../../assets/css/animacion.css'
 import { useInView } from 'react-intersection-observer';
 import ContactButtom from '../../../components/widgets/ContactButtom';
+import { SubTitle, Parrafo } from '../../../components/widgets/Texts';
 function Niveles(props) {
     const [animationClass, setAnimationClass] = useState('slide-left');
     const [ref, inView] = useInView({
@@ -26,32 +27,23 @@ function Niveles(props) {
             <Grid templateColumns={{ base: '1fr', md: '1fr 1fr 1fr' }} alignItems="center" justifyContent="center">
                 <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" className={animationClass}>
                     <Image h={{ lg: '180px', md: '100px', sm: '100px' }} src={IconJunior} alt='Logo palmosima' />
-                    <Text fontWeight={'bold'} marginTop={'10px'} zIndex={99} color={'#FFFF'} fontSize={{ base: "18px", md: "24px", lg: "24px" }}>
-                        Junior
-                    </Text>
-                    <Text margin={'10px 0 20px 0 '} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
-                        Desarrollo web de <br /> nivel básico
-                    </Text>
+                    <SubTitle text='Junior' />
+                    <Parrafo text='Desarrollo web de' />
+                    <Parrafo text='nivel básico' />
                     <ContactButtom />
                 </Box>
                 <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" className={animationClass}>
                     <Image h={{ lg: '180px', md: '100px', sm: '100px' }} src={IconSemiJunior} alt='Logo palmosima' />
-                    <Text fontWeight={'bold'} marginTop={'10px'} zIndex={99} color={'#FFFF'} fontSize={{ base: "18px", md: "24px", lg: "24px" }}>
-                        Semi Junior
-                    </Text>
-                    <Text margin={'10px 0 20px 0 '} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
-                        Desarrolador con <br /> dos años de experiencia
-                    </Text>
+                    <SubTitle text='Semi Senior' />
+                    <Parrafo text=' Desarrolador con' />
+                    <Parrafo text='dos años de experiencia' />
                     <ContactButtom />
                 </Box>
                 <Box display="flex" flexDirection="column" alignItems="center" textAlign="center" className={animationClass}>
                     <Image h={{ lg: '180px', md: '100px', sm: '100px' }} src={IconSenior} alt='Logo palmosima' />
-                    <Text fontWeight={'bold'} marginTop={'10px'} zIndex={99} color={'#FFFF'} fontSize={{ base: "18px", md: "24px", lg: "24px" }}>
-                        Senior
-                    </Text>
-                    <Text margin={'10px 0 20px 0 '} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
-                        Experto en <br /> desarrollo web
-                    </Text>
+                    <SubTitle text='Senior' />
+                    <Parrafo text=' desarrollo web' />
+                    <Parrafo text='dos años de experiencia' />
                     <ContactButtom />
                 </Box>
             </Grid>

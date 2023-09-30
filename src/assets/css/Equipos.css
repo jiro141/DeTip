@@ -25,7 +25,7 @@
     border-radius: 10px;
     text-align: center;
     animation: slideUp 1s ease-in-out;
-    animation-delay: 1.2s;
+    animation-delay: 0.5s;
     /* Retardo para dar tiempo a la carga de la página */
     animation-fill-mode: both;
 }

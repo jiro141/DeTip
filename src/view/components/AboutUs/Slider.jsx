@@ -7,6 +7,9 @@ import objetivos from '../../../assets/img/icons/objetivos.png';
 import publico from '../../../assets/img/icons/Publico objetivo.png';
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { BsBullseye, BsEyeFill } from "react-icons/bs";
+import { faSearch, faCrosshairs, faBullseye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import "../../../assets/css/nosotrosSlider.css"
 function MySlider(props) {
     const settings = {
@@ -17,52 +20,52 @@ function MySlider(props) {
         focusOnSelect: true,
     };
     const [isMobile, setIsMobile] = useState(false);
-console.log(isMobile);
+    console.log(isMobile);
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768); // Ajusta el punto de quiebre según sea necesario
+            setIsMobile(window.innerWidth <= 900); // Ajusta el punto de quiebre según sea necesario
         };
-
         handleResize(); // Comprueba el ancho de pantalla inicial
         window.addEventListener('resize', handleResize);
-
         return () => {
             window.removeEventListener('resize', handleResize);
         };
     }, []);
-
+    console.log(isMobile);
     return (
         <Box justifyContent={'center'} display={'flex'} margin={'50px'} gap={'30px'}>
             {isMobile ? (
-                <>
+                <Box  marginX={'500px'}>
                     <Carousel
+                        showArrows={false}
                         infiniteLoop
                         centerMode
+                        // autoPlay={true}
                         useKeyboardArrows={true}
                         emulateTouch={true}
                         showThumbs={false}
                         className="custom-carousel"
                     >
-                        <Box margin={'10px'}> <ButtomsAboutUs icon={mision} titulo={'Misión'} /></Box>
-                        <Box margin={'10px'}><ButtomsAboutUs icon={vision} titulo={'Visión'} /></Box>
-                        <Box margin={'10px'}><ButtomsAboutUs icon={objetivos} titulo={'Público Objetivo'} /></Box>
-                        <Box margin={'10px'}><ButtomsAboutUs icon={publico} titulo={'Objetivos Generales'} /></Box>
+                        <Box>
+                            <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faBullseye} />} label={'Misión'} />
+                        </Box>
+                        <Box>
+                            <ButtomsAboutUs icon={<BsEyeFill size={50} />} label={'Visión'} />
+                        </Box>
+                        <Box>
+                            <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faSearch} />} label={'Público Objetivo'} />
+                        </Box>
+                        <Box>
+                            <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faCrosshairs} />} label={'Objetivos Generales'} />
+                        </Box>
                     </Carousel>
-                </>
+                </Box>
             ) : (
                 <Box display={'flex'} gap={'20px'} marginX={'10px'}>
-                    <div>
-                        <ButtomsAboutUs icon={mision} titulo={'Misión'} />
-                    </div>
-                    <div>
-                        <ButtomsAboutUs icon={vision} titulo={'Visión'} />
-                    </div>
-                    <div>
-                        <ButtomsAboutUs icon={objetivos} titulo={'Público Objetivo'} />
-                    </div>
-                    <div>
-                        <ButtomsAboutUs icon={publico} titulo={'Objetivos Generales'} />
-                    </div>
+                    <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faBullseye} />} label={'Misión'} />
+                    <ButtomsAboutUs icon={<BsEyeFill size={50} />} label={'Visión'} />
+                    <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faSearch} />} label={'Público Objetivo'} />
+                    <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faCrosshairs} />} label={'Objetivos Generales'} />
                 </Box>
             )}
         </Box>

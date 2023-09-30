@@ -7,6 +7,7 @@ import { AiFillInstagram, AiOutlineWhatsApp, AiFillLinkedin, AiFillMail } from "
 import toast, { Toaster } from 'react-hot-toast';
 import '../assets/css/Equipos.css';
 import '../assets/css/fondo.css'
+import { Title, Parrafo } from '../components/widgets/Texts';
 const Contact = () => {
   const [nombre, setNombre] = useState('');
   const [apellido, setApellido] = useState('');
@@ -16,7 +17,7 @@ const Contact = () => {
   const [hora, setHora] = useState('');
   const notify = () => toast('Tu solicitud ha sido enviada con exito.',
     {
-      icon: '👨‍🚀',
+      icon: '🚀',
       style: {
         borderRadius: '20px',
         background: '#333',
@@ -46,55 +47,51 @@ const Contact = () => {
 
 
   return (
-    <>
+    <Box marginX={{ base: '5%', md: '0', lg: '0' }}>
       <Grid className='contacto' gap={'20px'} templateColumns={{ base: '1fr', md: ' 1fr', lg: '1fr 1fr' }}>
         <Box className='slide-up' margin={'10%'}>
-          <Text textAlign={'left'} zIndex={99} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>
-            ¡Contáctanos!
-          </Text>
-          <Text marginTop={'10px'} textAlign={'left'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
-            Concreta una cita con nuestro equipo de trabajo y nos comunicaremos contigo a la brevedad posible. Llena nuestro formulario y háblanos sobre tu proyecto. Puedes conococer más de nosotros a través de nuestras redes sociales.
-          </Text>
+          <Title aline={'left'} text={'¡Contáctanos!'}/>
+          <Parrafo text={'Concreta una cita con nuestro equipo de trabajo y nos comunicaremos contigo a la brevedad posible. Llena nuestro formulario y háblanos sobre tu proyecto. Puedes conococer más de nosotros a través de nuestras redes sociales.'} aline={'justify'}/>
           <Flex marginY={'20px'} gap={'50px'} alignItems={'center'} >
             <Link href='https://wa.me/14095974199'>
-              <AiOutlineWhatsApp color='#FFFF' size={50} />
+              <AiOutlineWhatsApp color='#FFFF' size={"4vw"} />
             </Link>
             <Link href="https://www.linkedin.com/company/detip-company/about/" >
-              <AiFillLinkedin color='#FFFF' size={50} />
+              <AiFillLinkedin color='#FFFF' size={"4vw"} />
             </Link>
             <Link href="https://www.instagram.com/detip_company" >
-              <AiFillInstagram color='#FFFF' size={50} />
+              <AiFillInstagram color='#FFFF' size={"4vw"} />
             </Link>
             <Link href='mailto:Contacto@DeTipCompany.com'>
-              <AiFillMail color='#FFFF' size={50} />
+              <AiFillMail color='#FFFF' size={"4vw"} />
             </Link>
           </Flex>
         </Box>
-        <Box className='slide-up' paddingY={'60px'} borderRadius={'30px'} m={{ lg: '10%', md: '8%', sm: '5%' }} backgroundColor={'#bababac1'}>
+        <Box className='slide-up' paddingY={'60px'} borderRadius={'10px'} m={{ lg: '10%', md: '8%', sm: '5%' }} backgroundColor={'#bababac1'}>
           <form ref={form} onSubmit={sendEmail}>
-            <VStack spacing={2}>
-              <FormControl>
+            <VStack >
+              <FormControl padding={'1% 2.5%'}>
                 <UnputFlotante
                   type="text"
                   nameI="user_name"
                   placeholder="Nombre y apellido"
                 />
               </FormControl>
-              <FormControl>
+              <FormControl padding={'1% 2.5%'}>
                 <UnputFlotante
                   type="email"
                   name="user_email"
                   placeholder="Correo"
                 />
               </FormControl>
-              <Box padding={{ lg: '1% 2.5%', md: '0', sm: '0' }} w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
-                <FormControl>
+              <Box  w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }} >
+                <FormControl padding={'1% 2.5%'}>
                   <UnputFlotante
                     type="text"
                     placeholder="Nombre de la empresa"
                   />
                 </FormControl>
-                <FormControl>
+                <FormControl padding={'1% 2.5%'}>
                   <UnputFlotante
                     type="text"
                     placeholder="Cargo"
@@ -102,34 +99,35 @@ const Contact = () => {
                   />
                 </FormControl>
               </Box>
-              <Box gap={'5%'} padding={'2% 5%'} w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
-                <FormControl >
+              <Box   w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
+                <FormControl padding={'1% 2.5%'}>
                   <Input
+                    // marginBottom={{ base: '5%', md: '0', lg: '0' }}
                     type="date"
                     placeholder="Fecha"
-                    borderRadius='50px'
+                    borderRadius='5px'
                     border={'none'}
                     backgroundColor={'#dadada'}
                   />
                 </FormControl>
-                <FormControl>
+                <FormControl padding={'1% 2.5%'}>
                   <Input
                     type="time"
                     placeholder="Hora"
-                    borderRadius='50px'
+                    borderRadius='5px'
                     border={'none'}
                     backgroundColor={'#dadada'}
                   />
                 </FormControl>
               </Box>
-              <FormControl padding={'2% 5%'} w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
+              <FormControl padding={'1% 2.5%'} w={'100%'} display={{ lg: 'flex', md: 'block', sm: 'block' }}>
                 <Textarea
                   maxH={'100px'}
-                  borderRadius='20px'
+                  borderRadius='5px'
                   border={'none'}
                   backgroundColor={'#dadada'} placeholder='Mensaje' />
               </FormControl>
-              <Button type="submit" value="Send" borderRadius={'20px'} w={'90%'} backgroundColor="#000" color={'#FFF'} >
+              <Button  type="submit" value="Send" borderRadius={'5px'} w={'95%'} backgroundColor="#000" color={'#FFF'} >
                 Envía tu mensaje
               </Button>
 
@@ -138,7 +136,7 @@ const Contact = () => {
         </Box>
       </Grid>
       <Toaster />
-    </>
+    </Box>
   );
 };
 

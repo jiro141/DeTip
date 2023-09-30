@@ -8,6 +8,7 @@ import ContactButtom from '../components/widgets/ContactButtom';
 import Niveles from './components/Services/niveles';
 import Equipo from './components/Services/Equipo';
 import Empresas from './components/Services/Empresas';
+import { Title, Parrafo } from '../components/widgets/Texts';
 function Services(props) {
     const [ref, inView] = useInView({
         triggerOnce: false, // La animación solo se activará una vez
@@ -15,14 +16,14 @@ function Services(props) {
     });
     return (
         <>
-            <Box className={`servicios-container ${inView ? 'in-view' : ''}`} ref={ref} >
+            <Box className={`servicios-container`} >
                 <Box className='text-container' marginTop={{ base: "5%", md: "5%", lg: "1%" }}>
-                    <Text textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>
-                        Freelance
-                    </Text>
-                    <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
+                    <Title text='Freelance' />
+                    <Parrafo text='Potencia el éxito de tu proyecto  ' />
+                    <Parrafo text='¡Consulta disponibilidad de nuestros expertos en el desarrollo web!' />
+                    {/* <Text marginTop={'10px'} textAlign={'center'} zIndex={99} color={'#FFFF'} fontSize={{ base: "14px", md: "18px", lg: "20px" }}>
                         Potencia el éxito de tu proyecto <br /> ¡Consulta disponibilidad de nuestros expertos en el desarrollo web!
-                    </Text>
+                    </Text> */}
                     <Box textAlign={'center'} m={'20px'}>
                         <ContactButtom />
                     </Box>
