@@ -8,7 +8,7 @@ import { faAddressCard, faTasks, faUsers, faEnvelopeOpenText } from '@fortawesom
 import { MenuItem } from './widgets/MenuItem';
 import '../assets/css/animacion.css'
 
-import logo from '../assets/img/Propuesta-Logo-1.webp';
+import logo from '../assets/img/PropuestaLogo.png';
 
 
 
@@ -54,7 +54,7 @@ const NavBar = () => {
         >
             <Box m={'auto 0'}>
                 <Link to="/">
-                    <Image h={{ base: '40px', md: '35px', lg: '40px' }} src={logo} alt="Logo palmosima" />
+                    <Image marginY={'-6%'} h={{ base: '80px', md: '80px', lg: '80px' }} src={logo} alt="Logo palmosima" />
                 </Link>
             </Box>
             <IconButton

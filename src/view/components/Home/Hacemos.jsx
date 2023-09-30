@@ -19,9 +19,9 @@ function Hacemos(props) {
             <Box order={{ md: 1, lg: 1, base: 2 }} >
                 <Image margin={'0 0px -15% 0px'} className="slide-up float" h={{ lg: '200px', md: '100px', base: '50px' }} src={nube2} alt='Logo palmosima' />
                 <Box margin={{ base: "20px", md: "50px", lg: "70px" }} className='text-container'>
-                    <SubTitle text={'¿Por qué'} color={'#000'} aline={'left'}/>
-                    <SubTitle text={'lo hacemos?'} color={'#000'} aline={'left'}/>
-                    <Parrafo text={'Nuestro objetivo es proveer herramientas que permitan el fácil acceso a la información por medio de la actualización de diferentes tipos de procesos. De esta forma contribuimos a la disminución de la huella de carbono y construimos un mundo mejor.'} color={'#000'} aline={'left'}/>
+                    <SubTitle text={'¿Por qué lo hacemos?'} color={'#000'} aline={'left'}/>
+                    {/* <SubTitle text={'lo hacemos?'} color={'#000'} aline={'left'}/> */}
+                    <Parrafo text={'Nuestro objetivo es proveer herramientas que permitan el fácil acceso a la información por medio de la actualización de diferentes tipos de procesos. De esta forma contribuimos a la disminución de la huella de carbono y construimos un mundo mejor.'} color={'#000'} aline={'justify'}/>
                     
                     <MoreInfo />
 
