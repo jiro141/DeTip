@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import '../assets/css/Equipos.css'; // Asegúrate de importar tu archivo de estilos CSS
 import { useInView } from 'react-intersection-observer';
 import ContactButtom from '../components/widgets/ContactButtom';
-import Niveles from './components/Services/niveles';
+import Niveles from './components/Services/Niveles';
 import Equipo from './components/Services/Equipo';
 import Empresas from './components/Services/Empresas';
 import { Title, Parrafo } from '../components/widgets/Texts';
