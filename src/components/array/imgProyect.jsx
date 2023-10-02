@@ -4,59 +4,59 @@ export const imgPatolsima = [
         url: "../../src/assets/img/projects/patolsima/1.webp"
     },
     {
-        id: "1",
+        id: "2",
         url: "../../src/assets/img/projects/patolsima/2.webp"
     },
     {
-        id: "1",
+        id: "3",
         url: "../../src/assets/img/projects/patolsima/3.webp"
     },
     {
-        id: "1",
+        id: "4",
         url: "../../src/assets/img/projects/patolsima/4.webp"
     },
     {
-        id: "1",
+        id: "5",
         url: "../../src/assets/img/projects/patolsima/5.webp"
     },
     {
-        id: "1",
+        id: "6",
         url: "../../src/assets/img/projects/patolsima/6.webp"
     },
     {
-        id: "1",
+        id: "6",
         url: "../../src/assets/img/projects/patolsima/7.webp"
     },
     {
-        id: "1",
+        id: "7",
         url: "../../src/assets/img/projects/patolsima/8.webp"
     },
     {
-        id: "1",
+        id: "8",
         url: "../../src/assets/img/projects/patolsima/9.webp"
     },
     {
-        id: "1",
+        id: "9",
         url: "../../src/assets/img/projects/patolsima/10.webp"
     },
     {
-        id: "1",
+        id: "10",
         url: "../../src/assets/img/projects/patolsima/11.webp"
     },
     {
-        id: "1",
+        id: "11",
         url: "../../src/assets/img/projects/patolsima/12.webp"
     },
     {
-        id: "1",
+        id: "12",
         url: "../../src/assets/img/projects/patolsima/13.webp"
     },
     {
-        id: "1",
+        id: "13",
         url: "../../src/assets/img/projects/patolsima/14.webp"
     },
     {
-        id: "1",
+        id: "14",
         url: "../../src/assets/img/projects/patolsima/15.webp"
     },
 
