@@ -16,7 +16,7 @@ function ButtomsAboutUs({ label, icon }) {
             <div className='menu2'>
                 <li>
                     {isActive ?
-                        <Link  onClick={() => changeNosotros(label)} >
+                        <Link className='b'  onClick={() => changeNosotros(label)} >
                             <span>
                                 <i>{icon}</i>
                             </span>

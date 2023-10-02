@@ -46,7 +46,7 @@ function MySlider(props) {
                         showThumbs={false}
                         className="custom-carousel"
                     >
-                        <Box>
+                        <Box marginTop={'10px'}>
                             <ButtomsAboutUs icon={<FontAwesomeIcon size={50} icon={faBullseye} />} label={'Misión'} />
                         </Box>
                         <Box>

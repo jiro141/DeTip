@@ -14,10 +14,12 @@ function Home(props) {
             <Box className='spece-home'>
                 <Box className="space1">
                 </Box>
-                <Title text={'Juntos construyamos'}/>
-                <Title text={'el nuevo mundo'}/>
-                <Box className="slide-up " display={'flex'} justifyContent={'center'} marginTop={{lg:'-10%',md:'-5%',sm:'10%'}} >
-                    <Image className='float' h={{lg:'800px',md:'500px',sm:'500px'}} src={planeta} alt='Logo palmosima' />
+                <Box marginTop={'50px'}>
+                    <Title text={'Juntos construyamos'} />
+                    <Title text={'el nuevo mundo'} />
+                    <Box className="slide-up " display={'flex'} justifyContent={'center'} marginTop={{ lg: '-10%', md: '-5%', sm: '10%' }} >
+                        <Image className='float' h={{ lg: '800px', md: '500px', sm: '500px' }} src={planeta} alt='Logo palmosima' />
+                    </Box>
                 </Box>
             </Box>
             <Equipos />
