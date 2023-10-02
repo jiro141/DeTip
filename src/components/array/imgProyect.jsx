@@ -1,4 +1,4 @@
-export let imgPatolsima = [
+export const imgPatolsima = [
     {
         id: "1",
         url: "../../src/assets/img/projects/patolsima/1.webp"
