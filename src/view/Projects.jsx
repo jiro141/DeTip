@@ -8,6 +8,20 @@ import AliCarousel from './components/Projects/AliCarousel';
 import EquipoCarrusel from './components/Projects/EquipoCarrusel';
 import MoreInfo from '../components/widgets/MoreInfo';
 import { Title, Parrafo, SubTitle } from '../components/widgets/Texts';
+import primera from '../assets/img/projects/patolsima/1.webp'
+import segunda from '../assets/img/projects/patolsima/2.webp'
+import tres from '../assets/img/projects/patolsima/3.webp'
+import cuatro from '../assets/img/projects/patolsima/4.webp'
+import cinco from '../assets/img/projects/patolsima/5.webp'
+import seis from '../assets/img/projects/patolsima/6.webp'
+import siete from '../assets/img/projects/patolsima/7.webp'
+import ocho from '../assets/img/projects/patolsima/8.webp'
+import nueve from '../assets/img/projects/patolsima/9.webp'
+import dies from '../assets/img/projects/patolsima/10.webp'
+import once from '../assets/img/projects/patolsima/11.webp'
+import doce from '../assets/img/projects/patolsima/12.webp'
+import trece from '../assets/img/projects/patolsima/13.webp'
+import catorce from '../assets/img/projects/patolsima/14.webp'
 
 function Projects(props) {
     return (
@@ -26,9 +40,20 @@ function Projects(props) {
                         showIndicators={false}
                         interval={3000}
                     >
-                        {imgPatolsima.map((image) => (
-                            <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={image.url} alt='Logo palmosima' />
-                        ))}
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={primera} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={segunda} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={tres} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={cuatro} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={cinco} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={seis} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={siete} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={ocho} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={nueve} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={dies} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={once} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={doce} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={trece} alt='Logo palmosima' />
+                        <Image h={{ lg: '300px', md: '500px', sm: '500px' }} src={catorce} alt='Logo palmosima' />
                     </Carousel>
                     <Box className="slide-up">
                         <Parrafo text={'Descripción:'} aline={'left'} /> <br />
@@ -42,7 +67,7 @@ function Projects(props) {
             </Box>
             <Box className="slide-up">
                 <AliCarousel className="slide-up" />
-                <SubTitle text={'Equipo'}/>
+                <SubTitle text={'Equipo'} />
                 {/* <Text marginY={'40px'} textAlign={'center'} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Equipo</Text> */}
                 <EquipoCarrusel className="slide-up" />
             </Box>
