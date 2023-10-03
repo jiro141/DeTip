@@ -41,8 +41,8 @@ body {
   height: 150vh;
   top: 50%;
   left: 100%;
-  margin-top: -150vh; 
-  margin-left: -130vw;
+  margin-top: -100vh; 
+  margin-left: -90vw;
   animation: spin 240s linear infinite;
   background-size: 240px;
   backface-visibility: visible;
