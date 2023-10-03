@@ -42,7 +42,7 @@ body {
   top: 50%;
   left: 100%;
   margin-top: -90vh; 
-  margin-left: -10vw;
+  margin-left: -100vw;
   animation: spin 240s linear infinite;
   background-size: 240px;
   backface-visibility: visible;
