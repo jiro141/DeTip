@@ -41,7 +41,7 @@ body {
   height: 150vh;
   top: 50%;
   left: 100%;
-  margin-top: -90vh; 
+  margin-top: -120vh; 
   margin-left: -100vw;
   animation: spin 240s linear infinite;
   background-size: 240px;
