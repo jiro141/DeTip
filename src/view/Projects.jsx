@@ -66,7 +66,7 @@ function Projects(props) {
                 <Parrafo text={'Simón Peraza - CEO de laboratorio Patolsima.'} /> */}
             </Box>
             <Box className="slide-up">
-                <AliCarousel className="slide-up" />
+                {/* <AliCarousel className="slide-up" /> */}
                 <SubTitle text={'Equipo'} />
                 {/* <Text marginY={'40px'} textAlign={'center'} color={'#FFFF'} fontSize={{ base: "24px", md: "30px", lg: "40px" }}>Equipo</Text> */}
                 <EquipoCarrusel className="slide-up" />

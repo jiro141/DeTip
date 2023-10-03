@@ -54,7 +54,7 @@ const NavBar = () => {
         >
             <Box m={'auto 0'}>
                 <Link to="/">
-                    <Image marginY={'-6%'} h={'60px'} src={logo} alt="Logo palmosima" />
+                    <Image marginY={'-12%'} h={'80px'} src={logo} alt="Logo palmosima" />
                 </Link>
             </Box>
             <IconButton
