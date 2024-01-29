@@ -46,12 +46,12 @@ import {
     }
   });
   
-  export default function UnputFlotante({placeholder,nameI,type}) {
+  export default function UnputFlotante({placeholder,name,type, value,onChange}) {
     return (
       <ChakraProvider theme={theme}>
         <Box >
           <FormControl  variant="floating" id="first-name" isRequired >
-            <Input type={type} name={nameI}   borderRadius= '5px' border={'none'} backgroundColor={'#dadada'} placeholder=" " />
+            <Input type={type} name={name} value={value} onChange={onChange}  borderRadius= '5px' border={'none'} backgroundColor={'#dadada'} placeholder=" " />
             <FormLabel  >{placeholder}</FormLabel>
           </FormControl>
         </Box>
