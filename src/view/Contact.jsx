@@ -65,7 +65,7 @@ const Contact = () => {
     try {
       // Realizar una solicitud POST al endpoint especificado
       const response = await axios.post(
-        "http://localhost:5000/enviar-correo",
+        "detip-server.vercel.app/enviar-correo",
         formData
       );
 
